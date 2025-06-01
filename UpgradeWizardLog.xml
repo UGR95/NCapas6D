@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\ProyectoFinal_U1-2.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\App.config" />
+  <event action="Analyze" type="Success" name="Dashboard-Admin.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\Dashboard-Admin.resx" />
+  <event action="Analyze" type="Success" name="Dashboard-Operador.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\Dashboard-Operador.resx" />
+  <event action="Analyze" type="Success" name="frmReporteUsers.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\frmReporteUsers.resx" />
+  <event action="Analyze" type="Success" name="Gestion-Autor-Titulo.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\Gestion-Autor-Titulo.resx" />
+  <event action="Analyze" type="Success" name="Gestion-Autores.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\Gestion-Autores.resx" />
+  <event action="Analyze" type="Success" name="Gestion-Descuentos.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\Gestion-Descuentos.resx" />
+  <event action="Analyze" type="Success" name="Gestion-Empleados.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\Gestion-Empleados.resx" />
+  <event action="Analyze" type="Success" name="Gestion-Tiendas.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\Gestion-Tiendas.resx" />
+  <event action="Analyze" type="Success" name="Gestion-Titulos.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\Gestion-Titulos.resx" />
+  <event action="Analyze" type="Success" name="Gestion-Ventas.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\Gestion-Ventas.resx" />
+  <event action="Analyze" type="Success" name="Login.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\Login.resx" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="Registro-Usuario.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\Registro-Usuario.resx" />
+  <event action="Analyze" type="Success" name="ReporteUsuarios.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\Reportes\ReporteUsuarios.resx" />
+  <event action="Analyze" type="Success" name="StockLibros.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\StockLibros.resx" />
+  <event action="Analyze" type="Success" name="Venta-Libros.resx" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\Venta-Libros.resx" />
+  <event action="Analyze" type="Success" name="ProyectoFinal_U1-2" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\ProyectoFinal_U1-2.csproj" />
+  <event action="Analyze" type="Success" name="ProyectoFinal_U1-2" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\ProyectoFinal_U1-2.sln" />
+  <event action="Backup" type="Error" name="ProyectoFinal_U1-2" path="C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\ProyectoFinal_U1-2.csproj">System.IO.IOException: El proceso no puede obtener acceso al archivo 'C:\Users\Uriel\Documents\Tec San Pedro\2025\6 D\Proyecto\ProyectoFinal\.vs\ProyectoFinal_U1-2\FileContentIndex\37dc546f-7772-48f0-a0a2-7d525b3640fb.vsidx' porque está siendo utilizado en otro proceso.
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en Telerik.Reporting.UpgradeWizard.Engine.Services.BackupService.BackupDirectory(String directoryName)
+   en Telerik.Reporting.UpgradeWizard.Engine.Services.BackupService.BackupDirectory(String directoryName)
+   en Telerik.Reporting.UpgradeWizard.Engine.Services.BackupService.BackupDirectory(String directoryName)
+   en Telerik.Reporting.UpgradeWizard.Engine.Services.BackupService.BackupDirectory(String directoryName)
+   en Telerik.Reporting.UpgradeWizard.Engine.ProjectItem.BackupInternal()
+   en Telerik.Reporting.UpgradeWizard.Engine.UpgradeItem.Backup()</event>
+</log>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49189089-CF2B-4935-A2BB-D77FF5CE383F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProyectoFinal_U1_2</RootNamespace>
+    <AssemblyName>ProyectoFinal_U1-2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=19.0.25.313, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.ReportViewer.WinForms, Version=19.0.25.313, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Dashboard-Operador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard-Operador.Designer.cs">
+      <DependentUpon>Dashboard-Operador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatosPubs.cs" />
+    <Compile Include="Datos\DVentaLibro.cs" />
+    <Compile Include="Flujo\FVentaLibro.cs" />
+    <Compile Include="frmReporteAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteAutores.Designer.cs">
+      <DependentUpon>frmReporteAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteUsers.Designer.cs">
+      <DependentUpon>frmReporteUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion-Autor-Titulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion-Autor-Titulo.Designer.cs">
+      <DependentUpon>Gestion-Autor-Titulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion-Autores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion-Autores.Designer.cs">
+      <DependentUpon>Gestion-Autores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion-Descuentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion-Descuentos.Designer.cs">
+      <DependentUpon>Gestion-Descuentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion-Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion-Empleados.Designer.cs">
+      <DependentUpon>Gestion-Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion-Tiendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion-Tiendas.Designer.cs">
+      <DependentUpon>Gestion-Tiendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion-Titulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion-Titulos.Designer.cs">
+      <DependentUpon>Gestion-Titulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion-Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion-Ventas.Designer.cs">
+      <DependentUpon>Gestion-Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PVentaLibro.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dashboard-Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard-Admin.Designer.cs">
+      <DependentUpon>Dashboard-Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro-Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro-Usuario.Designer.cs">
+      <DependentUpon>Registro-Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteAutores.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteAutores.Designer.cs">
+      <DependentUpon>ReporteAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteUsuarios.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteUsuarios.Designer.cs">
+      <DependentUpon>ReporteUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockLibros.Designer.cs">
+      <DependentUpon>StockLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Venta-Libros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta-Libros.Designer.cs">
+      <DependentUpon>Venta-Libros.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dashboard-Operador.resx">
+      <DependentUpon>Dashboard-Operador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteAutores.resx">
+      <DependentUpon>frmReporteAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteUsers.resx">
+      <DependentUpon>frmReporteUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion-Autor-Titulo.resx">
+      <DependentUpon>Gestion-Autor-Titulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion-Autores.resx">
+      <DependentUpon>Gestion-Autores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion-Descuentos.resx">
+      <DependentUpon>Gestion-Descuentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion-Empleados.resx">
+      <DependentUpon>Gestion-Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion-Tiendas.resx">
+      <DependentUpon>Gestion-Tiendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion-Titulos.resx">
+      <DependentUpon>Gestion-Titulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion-Ventas.resx">
+      <DependentUpon>Gestion-Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dashboard-Admin.resx">
+      <DependentUpon>Dashboard-Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro-Usuario.resx">
+      <DependentUpon>Registro-Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteAutores.resx">
+      <DependentUpon>ReporteAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteUsuarios.resx">
+      <DependentUpon>ReporteUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockLibros.resx">
+      <DependentUpon>StockLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta-Libros.resx">
+      <DependentUpon>Venta-Libros.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
