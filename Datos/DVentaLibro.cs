@@ -34,7 +34,11 @@ namespace ProyectoFinal_U1_2.Datos
                         pVenta.title_Id = dr[0].ToString();
 						pVenta.title = dr[1].ToString();
 						pVenta.type = dr[2].ToString();
-						pVenta.price = Convert.ToDecimal(dr[3].ToString());
+						if (!string.IsNullOrEmpty(dr[3].ToString()))
+                            pVenta.price = Convert.ToDecimal(dr[3].ToString());
+                        else
+                            pVenta.price = 0; 
+
 						pVenta.notes = dr[4].ToString();
 						pVenta.pubDate = Convert.ToDateTime(dr[5].ToString());
 						pVenta.NombreAutor = dr[6].ToString();
@@ -46,12 +50,43 @@ namespace ProyectoFinal_U1_2.Datos
 
 				return ListaVentas;
 			}
-			catch (Exception)
+			catch (Exception ex)
 			{
-				return new List<PVentaLibro>();
+				List<PVentaLibro> lista = new List<PVentaLibro>();
+				PVentaLibro pVenta = new PVentaLibro();
+
+				pVenta.Error = ex.ToString();
+				lista.Add(pVenta);
+				return lista;
 			}
 
         }
 
+		public void GenerarVenta(int qty, string Title_id, decimal Porcentaje, decimal Total)
+		{
+			try
+			{
+				
+				using(SqlConnection con = new SqlConnection(Conexion.ConnectionString))
+				{
+					SqlCommand cmd = new SqlCommand("InsertSale", con);
+					cmd.CommandType = CommandType.StoredProcedure;
+
+					cmd.Parameters.AddWithValue("@qty", qty);
+                    cmd.Parameters.AddWithValue("@title_id", Title_id);
+                    cmd.Parameters.AddWithValue("@porcentaje_descuento", Porcentaje);
+                    cmd.Parameters.AddWithValue("@total", Total);
+
+					con.Open();
+					cmd.ExecuteNonQuery();
+					con.Close();
+                }
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
     }
 }

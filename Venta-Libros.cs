@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoFinal_U1_2.Flujo;
 
 namespace ProyectoFinal_U1_2
 {
@@ -71,11 +72,11 @@ namespace ProyectoFinal_U1_2
         }
         private void CalcularTotal()
         {
-            if (decimal.TryParse(txtCantidad.Text, out decimal cantidad) &&
+            if (//decimal.TryParse(txtCantidad.Text, out decimal cantidad) &&
                 decimal.TryParse(txtPrecio.Text, out decimal precio) &&
                 decimal.TryParse(txtPorcentajeDescuento.Text.Replace("%", ""), out decimal descuento))
             {
-                decimal subtotal = cantidad * precio;
+                decimal subtotal = NumUDCantidad.Value * precio;
                 decimal totalConDescuento = subtotal - (subtotal * (descuento / 100));
                 txtTotal.Text = totalConDescuento.ToString("0.00");
             }
@@ -97,26 +98,16 @@ namespace ProyectoFinal_U1_2
         }
         private void MostrarDatos()
         {
-            string query = "SELECT * FROM dbo.titles";
-
-            using (SqlConnection conn = new SqlConnection(Conexion.ConnectionString))
+            FVentaLibro fVenta = new FVentaLibro();
+            try
             {
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
-
-                DataTable dataTable = new DataTable();
-
-                try
-                {
-                    conn.Open();
-
-                    dataAdapter.Fill(dataTable);
-
-                    dgvLibros.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
+                //dgvLibros.Columns.Add("Title_Id", "Id Titulo");
+                dgvLibros.DataSource = fVenta.MostrarLibrosVenta();
+                dgvLibros.Columns[7].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -128,38 +119,19 @@ namespace ProyectoFinal_U1_2
                 DataGridViewRow row = dgvLibros.Rows[e.RowIndex];
 
                 txtIdLibro.Text = row.Cells["title_id"].Value.ToString();
-                
 
-                string query = "SELECT * FROM vista_detalle_libro WHERE title_id = @title_id";
-
-                using (SqlConnection conn = new SqlConnection(Conexion.ConnectionString))
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@title_id", txtIdLibro.Text);
-
-                    conn.Open();
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    if (reader.Read())
-                    {
-                        txtNombreLibro.Text = reader["title"].ToString();
-                        txtNombreLibro.Enabled = false;
-                        txtTipo.Text = reader["type"].ToString();
-                        txtNotas.Text = reader["notes"].ToString();
-                        txtAutor.Text = reader["autor"].ToString();
-                        txtPublicado.Text = Convert.ToDateTime(reader["pubdate"]).ToShortDateString();
-                        txtPrecio.Text = reader["price"].ToString();
-                    }
-                    else {
-                            MessageBox.Show("Por favor, verifica que el libro haya sido relacionado con un autor.");
-
-
-                        
-                    }
-
-                    conn.Close();
-                }
-
+                txtNombreLibro.Text = row.Cells[1].Value.ToString();
+                txtNombreLibro.Enabled = false;
+                txtTipo.Text = row.Cells[2].Value.ToString();
+                txtTipo.Enabled = false;
+                txtAutor.Text = row.Cells[6].Value.ToString();
+                txtAutor.Enabled = false;
+                txtNotas.Text = row.Cells[4].Value.ToString();
+                txtNotas.Enabled = false;
+                txtPublicado.Text = row.Cells[5].Value.ToString();
+                txtPublicado.Enabled = false;
+                txtPrecio.Text = row.Cells[3].Value.ToString();
+                txtPrecio.Enabled = false;
             }
         }
 
@@ -218,14 +190,15 @@ namespace ProyectoFinal_U1_2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            FVentaLibro fVenta = new FVentaLibro();
             int qty;
             string titleId = txtIdLibro.Text;
 
-            if (!int.TryParse(txtCantidad.Text, out qty))
-            {
-                MessageBox.Show("Por favor, ingresa una cantidad válida.");
-                return;
-            }
+            //if (!int.TryParse(txtCantidad.Text, out qty))
+            //{
+            //    MessageBox.Show("Por favor, ingresa una cantidad válida.");
+            //    return;
+            //}
 
             
             if (!ExisteTitle(titleId))
@@ -234,29 +207,16 @@ namespace ProyectoFinal_U1_2
                 return;
             }
 
-            string query = "EXEC InsertSale @qty, @title_id, @porcentaje_descuento, @total";
-
-            using (SqlConnection conn = new SqlConnection(Conexion.ConnectionString))
-            using (SqlCommand cmd = new SqlCommand(query, conn))
+            try
             {
-                // Agregar parámetros para la consulta
-                cmd.Parameters.AddWithValue("@qty", qty);
-                cmd.Parameters.AddWithValue("@title_id", titleId);
-                cmd.Parameters.AddWithValue("@porcentaje_descuento", Convert.ToDouble(txtPorcentajeDescuento.Text));
-                cmd.Parameters.AddWithValue("@total", Convert.ToDouble(txtTotal.Text));
-
-                try
-                {
-                    conn.Open();
-                    cmd.ExecuteNonQuery();  
-
-                    MessageBox.Show("Venta registrada correctamente.");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al registrar la venta: " + ex.Message);
-                }
+                fVenta.GenerarVenta(Convert.ToInt32(NumUDCantidad.Value), titleId, Convert.ToDecimal(txtPorcentajeDescuento.Text), Convert.ToDecimal(txtTotal.Text));
+                MessageBox.Show("Venta registrada correctamente.");
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar la venta: " + ex.Message);
+            }
+            
             string mensajeInventario = ObtenerMensajeInventario(titleId);
 
             MessageBox.Show(mensajeInventario);
@@ -373,6 +333,11 @@ namespace ProyectoFinal_U1_2
         {
             CalcularTotal();
 
+        }
+
+        private void NumUDCantidad_ValueChanged(object sender, EventArgs e)
+        {
+            CalcularTotal();
         }
     }
 }

@@ -61,7 +61,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Gill Sans MT", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(768, 656);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(133, 51);
             this.button4.TabIndex = 315;
@@ -84,7 +84,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(20, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(59, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -136,7 +136,7 @@
             this.txtLibro.Cursor = System.Windows.Forms.Cursors.No;
             this.txtLibro.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLibro.Location = new System.Drawing.Point(685, 369);
-            this.txtLibro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLibro.Margin = new System.Windows.Forms.Padding(2);
             this.txtLibro.Multiline = true;
             this.txtLibro.Name = "txtLibro";
             this.txtLibro.ReadOnly = true;
@@ -149,7 +149,7 @@
             this.dgvStocks.BackgroundColor = System.Drawing.Color.SeaShell;
             this.dgvStocks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStocks.Location = new System.Drawing.Point(26, 282);
-            this.dgvStocks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvStocks.Margin = new System.Windows.Forms.Padding(2);
             this.dgvStocks.Name = "dgvStocks";
             this.dgvStocks.RowHeadersWidth = 51;
             this.dgvStocks.RowTemplate.Height = 24;
@@ -164,7 +164,7 @@
             this.txtStock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStock.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStock.Location = new System.Drawing.Point(685, 460);
-            this.txtStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(2);
             this.txtStock.Multiline = true;
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(178, 35);
@@ -181,7 +181,7 @@
             this.btnActualizarStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarStock.Font = new System.Drawing.Font("Gill Sans MT", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarStock.Location = new System.Drawing.Point(636, 542);
-            this.btnActualizarStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizarStock.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizarStock.Name = "btnActualizarStock";
             this.btnActualizarStock.Size = new System.Drawing.Size(133, 51);
             this.btnActualizarStock.TabIndex = 303;
@@ -226,7 +226,7 @@
             this.txtIdStock.Cursor = System.Windows.Forms.Cursors.No;
             this.txtIdStock.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdStock.Location = new System.Drawing.Point(685, 289);
-            this.txtIdStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdStock.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdStock.Multiline = true;
             this.txtIdStock.Name = "txtIdStock";
             this.txtIdStock.ReadOnly = true;
@@ -269,7 +269,7 @@
             this.btnClose.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnClose.Location = new System.Drawing.Point(878, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 38);
             this.btnClose.TabIndex = 296;
@@ -284,7 +284,7 @@
             this.txtIdLibro.Cursor = System.Windows.Forms.Cursors.No;
             this.txtIdLibro.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdLibro.Location = new System.Drawing.Point(685, 329);
-            this.txtIdLibro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdLibro.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdLibro.Multiline = true;
             this.txtIdLibro.Name = "txtIdLibro";
             this.txtIdLibro.ReadOnly = true;
@@ -312,7 +312,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(912, 718);
+            this.ClientSize = new System.Drawing.Size(1317, 783);
             this.Controls.Add(this.txtIdLibro);
             this.Controls.Add(this.tx);
             this.Controls.Add(this.button4);
@@ -332,7 +332,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StockLibros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StockLibros";

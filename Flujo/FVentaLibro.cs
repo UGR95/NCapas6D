@@ -15,7 +15,7 @@ namespace ProyectoFinal_U1_2.Flujo
 			try
 			{
 				DVentaLibro dv = new DVentaLibro();
-				return dv.MostrarLibrosVenta();
+				return dv.MostrarLibrosVenta(); 
 			}
 			catch (Exception)
 			{
@@ -23,6 +23,12 @@ namespace ProyectoFinal_U1_2.Flujo
                 return lista;
 
             }
+        }
+
+        public void GenerarVenta(int qty, string Title_id, decimal Porcentaje, decimal Total)
+        {
+            DVentaLibro dVenta = new DVentaLibro();
+            dVenta.GenerarVenta(qty, Title_id, Porcentaje, Total);
         }
     }
 }

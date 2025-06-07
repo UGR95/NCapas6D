@@ -50,7 +50,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.cmbDescuentos = new System.Windows.Forms.ComboBox();
@@ -67,8 +66,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.NumUDCantidad = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumUDCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -149,7 +150,7 @@
             this.btnVender.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PapayaWhip;
             this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVender.Font = new System.Drawing.Font("Gill Sans MT", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVender.Location = new System.Drawing.Point(792, 661);
+            this.btnVender.Location = new System.Drawing.Point(916, 432);
             this.btnVender.Margin = new System.Windows.Forms.Padding(2);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(165, 51);
@@ -207,6 +208,7 @@
             // 
             this.txtIdLibro.BackColor = System.Drawing.Color.White;
             this.txtIdLibro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdLibro.Enabled = false;
             this.txtIdLibro.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdLibro.Location = new System.Drawing.Point(552, 253);
             this.txtIdLibro.Margin = new System.Windows.Forms.Padding(2);
@@ -348,19 +350,6 @@
             this.label15.Size = new System.Drawing.Size(330, 45);
             this.label15.TabIndex = 109;
             this.label15.Text = "📄Módulo de Ventas";
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.BackColor = System.Drawing.Color.White;
-            this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCantidad.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(994, 251);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCantidad.Multiline = true;
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(214, 35);
-            this.txtCantidad.TabIndex = 113;
-            this.txtCantidad.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // label17
             // 
@@ -555,12 +544,21 @@
             this.label16.TabIndex = 279;
             this.label16.Text = "Total:";
             // 
+            // NumUDCantidad
+            // 
+            this.NumUDCantidad.Location = new System.Drawing.Point(994, 262);
+            this.NumUDCantidad.Name = "NumUDCantidad";
+            this.NumUDCantidad.Size = new System.Drawing.Size(214, 20);
+            this.NumUDCantidad.TabIndex = 280;
+            this.NumUDCantidad.ValueChanged += new System.EventHandler(this.NumUDCantidad_ValueChanged);
+            // 
             // Venta_Libros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1248, 735);
+            this.Controls.Add(this.NumUDCantidad);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label10);
@@ -575,7 +573,6 @@
             this.Controls.Add(this.label19);
             this.Controls.Add(this.cmbDescuentos);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -606,6 +603,7 @@
             this.Load += new System.EventHandler(this.Venta_Libros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumUDCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -632,7 +630,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox cmbDescuentos;
@@ -649,5 +646,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.NumericUpDown NumUDCantidad;
     }
 }
