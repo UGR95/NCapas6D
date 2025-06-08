@@ -67,6 +67,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.NumUDCantidad = new System.Windows.Forms.NumericUpDown();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cmbTienda = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUDCantidad)).BeginInit();
@@ -150,7 +152,7 @@
             this.btnVender.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PapayaWhip;
             this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVender.Font = new System.Drawing.Font("Gill Sans MT", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVender.Location = new System.Drawing.Point(916, 432);
+            this.btnVender.Location = new System.Drawing.Point(916, 494);
             this.btnVender.Margin = new System.Windows.Forms.Padding(2);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(165, 51);
@@ -389,7 +391,7 @@
             this.txtTotal.BackColor = System.Drawing.Color.White;
             this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTotal.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(994, 380);
+            this.txtTotal.Location = new System.Drawing.Point(994, 442);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotal.Multiline = true;
             this.txtTotal.Name = "txtTotal";
@@ -480,7 +482,7 @@
             this.txtPorcentajeDescuento.BackColor = System.Drawing.Color.White;
             this.txtPorcentajeDescuento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPorcentajeDescuento.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPorcentajeDescuento.Location = new System.Drawing.Point(994, 332);
+            this.txtPorcentajeDescuento.Location = new System.Drawing.Point(994, 394);
             this.txtPorcentajeDescuento.Margin = new System.Windows.Forms.Padding(2);
             this.txtPorcentajeDescuento.Multiline = true;
             this.txtPorcentajeDescuento.Name = "txtPorcentajeDescuento";
@@ -495,7 +497,7 @@
             this.label20.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label20.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(798, 332);
+            this.label20.Location = new System.Drawing.Point(798, 394);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(186, 27);
@@ -509,7 +511,7 @@
             this.label10.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(800, 359);
+            this.label10.Location = new System.Drawing.Point(800, 421);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(75, 21);
@@ -537,7 +539,7 @@
             this.label16.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label16.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(799, 388);
+            this.label16.Location = new System.Drawing.Point(799, 450);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(55, 27);
@@ -552,12 +554,38 @@
             this.NumUDCantidad.TabIndex = 280;
             this.NumUDCantidad.ValueChanged += new System.EventHandler(this.NumUDCantidad_ValueChanged);
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label21.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(799, 343);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(68, 27);
+            this.label21.TabIndex = 282;
+            this.label21.Text = "Tienda:";
+            // 
+            // cmbTienda
+            // 
+            this.cmbTienda.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTienda.FormattingEnabled = true;
+            this.cmbTienda.Location = new System.Drawing.Point(994, 342);
+            this.cmbTienda.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbTienda.Name = "cmbTienda";
+            this.cmbTienda.Size = new System.Drawing.Size(214, 35);
+            this.cmbTienda.TabIndex = 281;
+            // 
             // Venta_Libros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1248, 735);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.cmbTienda);
             this.Controls.Add(this.NumUDCantidad);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label13);
@@ -647,5 +675,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.NumericUpDown NumUDCantidad;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox cmbTienda;
     }
 }

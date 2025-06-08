@@ -27,8 +27,17 @@ namespace ProyectoFinal_U1_2
         private void Venta_Libros_Load(object sender, EventArgs e)
         {
             MostrarDatos();
+            CargarTiendas();
             MostrarDescuentos();
             txtPorcentajeDescuento.Text = "0 %";
+        }
+
+        private void CargarTiendas()
+        {
+            FVentaLibro fVenta = new FVentaLibro();
+            cmbTienda.DataSource = fVenta.CargarTiendas();
+            cmbTienda.DisplayMember = "NombreTienda";
+            cmbTienda.ValueMember = "IdTienda";
         }
 
         private void MostrarDescuentos()
@@ -103,7 +112,9 @@ namespace ProyectoFinal_U1_2
             {
                 //dgvLibros.Columns.Add("Title_Id", "Id Titulo");
                 dgvLibros.DataSource = fVenta.MostrarLibrosVenta();
-                dgvLibros.Columns[7].Visible = false;
+                dgvLibros.Columns["Error"].Visible = false;
+                dgvLibros.Columns["IdTienda"].Visible = false;
+                dgvLibros.Columns["NombreTienda"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -193,6 +204,7 @@ namespace ProyectoFinal_U1_2
             FVentaLibro fVenta = new FVentaLibro();
             int qty;
             string titleId = txtIdLibro.Text;
+            string Error = "";
 
             //if (!int.TryParse(txtCantidad.Text, out qty))
             //{
@@ -206,11 +218,23 @@ namespace ProyectoFinal_U1_2
                 MessageBox.Show("El libro seleccionado no existe.");
                 return;
             }
+            if (NumUDCantidad.Value == 0) {
+                MessageBox.Show("Valor invalido en cantidad a vender");
+                return;
+            }
 
             try
             {
-                fVenta.GenerarVenta(Convert.ToInt32(NumUDCantidad.Value), titleId, Convert.ToDecimal(txtPorcentajeDescuento.Text), Convert.ToDecimal(txtTotal.Text));
-                MessageBox.Show("Venta registrada correctamente.");
+               Error = fVenta.GenerarVenta(cmbTienda.SelectedValue.ToString(), Convert.ToInt32(NumUDCantidad.Value), titleId, Convert.ToDecimal(txtPorcentajeDescuento.Text), Convert.ToDecimal(txtTotal.Text));
+
+                if (string.IsNullOrEmpty(Error))
+                {
+
+                    MessageBox.Show("Venta registrada correctamente.");
+                    MostrarDatos();
+                }
+                else
+                    MessageBox.Show(Error);
             }
             catch (Exception ex)
             {

@@ -15,6 +15,12 @@ namespace ProyectoFinal_U1_2.Presentacion
         public string notes { get; set; }
         public DateTime pubDate { get; set; }
         public string NombreAutor { get; set; }
+
+        public int Stock {  get; set; }
         public string Error { get; set; }
+
+        public string IdTienda { get; set; }
+        public string NombreTienda { get; set; }
+
     }
 }
